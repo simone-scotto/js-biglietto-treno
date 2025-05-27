@@ -36,13 +36,16 @@ console.log(kilometraggio);
 let tariffa_base = 0.21
 
 // calcolare variabile tariffa base 
+// prezzo = 0.21€ * tot Km 
 
 let prezzo_base = (tariffa_base * kilometraggio).toFixed(2);
 
 // tariffe scontate
 
+    // prezzo= 20% di (0.21 * tot km)
 let sconto_under18 = (prezzo_base/100)*20
 
+    // prezzo 40% di (0.21 * km)
 let sconto_over65 = (prezzo_base/100)*40
 
 
@@ -57,27 +60,18 @@ let prezzo_over65 = (prezzo_base - sconto_over65).toFixed(2);
 
 
 
-        // prezzo = 0.21€ * tot Km 
 
-// prezzo base 0.20€ al km 
+// if erà < 18
 if (età < 18) {
     console.log(prezzo_under18);
-    
+
+    // else if età > 65
 } else if (età > 65) {
     console.log(prezzo_over65);
-    
+  
+    // else prezzo intero
+
 } else {
     console.log(prezzo_base);
     
 }
-
-
-
-        // if erà < 18
-                // prezzo= 20% di (0.21 * tot km)
-        
-        // else if età > 65 
-                // prezzo 40% di (0.21 * km)
-
-        // else prezzo intero
-
